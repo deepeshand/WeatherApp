@@ -8,5 +8,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [RetroModule::class])
 interface RetroComponent {
-    fun inject(weatherViewModel: WeatherViewModel)
+    fun inject(weatherViewModel: WeatherViewModel )
 }

@@ -23,7 +23,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         weatherViewModel = ViewModelProvider(this).get(WeatherViewModel::class.java)
         setContentView(binding.root)
-        var response = weatherViewModel.fetchweatherdata("ottawa")
+        var response = weatherViewModel.fetchweatherdata("vancouver")
+
+        binding.btnClick.setOnClickListener(View.OnClickListener {
+            var location = binding.edtlocation.text.toString()
+            if(location.toString().length> 0) {
+                var response = weatherViewModel.fetchweatherdata(location)
+                response.observe(this, Observer {
+                    setData(it)
+                })
+            } else {
+                Toast.makeText(applicationContext,"Enter Location",Toast.LENGTH_LONG).show()
+            }
+        })
         response.observe(this, Observer {
             setData(it)
         })
@@ -31,10 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setData(it: Response<WeatherModel>?) {
 
-
-        //binding.name
         binding.name.setText(it?.body()?.name)
-
         var temp = (((it?.body()?.main?.temp?.minus(273))?.times(100.0))?.roundToInt()
             ?.div(100.0)).toString()
         binding.temp.setText(temp)
