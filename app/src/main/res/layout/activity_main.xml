@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#534F4C"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="35dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:textSize="20.0dip">
+
+                <TextView
+                    android:id="@+id/degree"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="N/A"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#fff"
+                    android:textSize="30.0dip"
+                    app:fontFamily="monospace" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="N/A"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#fff"
+                    android:textSize="30.0dip"
+                    app:fontFamily="monospace" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                app:fontFamily="serif">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="N/A"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+                    android:textSize="30.0dip"
+                    android:textStyle="bold"
+                    app:fontFamily="monospace" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temp"
+                        android:textSize="30.0dip"
+                        android:textStyle="bold"
+
+
+                        app:fontFamily="monospace" />
+
+                    <TextView
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/one"
+                        android:layout_alignParentRight="true"
+                        android:text="N/A"
+
+                        android:textSize="30.0dip"
+
+                        android:textStyle="bold"
+                        app:fontFamily="monospace" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textSize="30.0dip"
+                        android:textStyle="bold"
+
+                        app:fontFamily="monospace" />
+
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/two"
+                        android:layout_alignParentRight="true"
+                        android:text="N/A"
+                        android:textSize="30.0dip"
+                        android:textStyle="bold"
+
+                        app:fontFamily="monospace" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Speed"
+                        android:textSize="30.0dip"
+                        android:textStyle="bold"
+                        app:fontFamily="monospace" />
+
+                    <TextView
+                        android:id="@+id/speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/three"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="monospace"
+                        android:text="N/A"
+                        android:textSize="30.0dip"
+                        android:textStyle="bold"
+
+                        app:fontFamily="monospace" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
